@@ -1,0 +1,273 @@
+.admin__content {
+    max-width: 1280px;
+    width: 100%;
+    text-align: center;
+    color: #7b6650;
+}
+
+.admin__heading {
+    font-family: "Alegreya", serif;
+}
+
+.admin-form__heading h2 {
+    margin: 0;
+    padding: 30px;
+}
+
+.admin__search-form {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin__search-form input[type="text"],
+.admin__search-form input[type="date"],
+.admin__search-form select {
+    padding: 8px 10px;
+    height: 38px;
+    line-height: 1.4;
+    border: 1px solid #d6ccc2;
+    font-size: 14px;
+}
+
+.admin__search-form input[type="text"] {
+    width: 290px;
+    background-color: #fcfbfc;
+    color: #c4b4a8;
+}
+
+.admin__search-form select {
+    width: auto;
+    background-color: #f5f5f5;
+    color: #c4b4a8;
+    height: 38px;
+    line-height: 1.4;
+    cursor: pointer;
+    /* appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; */
+}
+
+
+
+
+.admin__search-form input[type="date"] {
+    background-color: #f5f5f5;
+    color: #c4b4a8;
+    cursor: pointer;
+}
+
+.search__button,
+.reset__button {
+    display: inline-block;
+    height: 38px;
+    line-height: 1.4;
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;transition: background-color 0.2s;
+}
+
+.search__button {
+    background-color: #82766a;
+    width: 80px;
+}
+
+.reset__button {
+    background-color: #dbc4b5;
+    text-decoration: none;
+    width: 100px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.export__button-submit {
+    background-color: #ede9e6;
+    color: #9d9388;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.pagination .page-link,
+.pagination .page-item.active .page-link,
+.pagination .page-item.active span {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 23px;
+    line-height: 1;
+    border: 1px solid #d6ccc2;
+    border-radius: 2px;
+    font-family: "Alegreya", serif;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #7b6650;
+}
+
+.pagination .page-item.active .page-link,
+.pagination .page-item.active span {
+    background-color: #897a68;
+    color: #fff;
+}
+
+
+.pagination .active span {
+    background-color: #8c7a6c;
+}
+
+.table {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    border: 1px solid #d6ccc2;
+}
+
+.admin-table__header {
+    background-color: #8b7968;
+    color: #fff;
+    padding: 10px 30px;
+    text-align: left;
+}
+
+.admin-table__text {
+    padding: 10px 30px;
+    border-bottom: 1px solid #d6ccc2;
+    text-align: left;
+}
+
+.admin-table__text:last-child {
+    padding-right:10px ;
+}
+
+.detail__button {
+    text-decoration: none;
+    color: #c4b4a8;
+    border: 1px solid #d6ccc2;
+    padding: 2px 12px;
+}
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 600px;
+    max-width: 90%;
+    padding: 40px 50px;
+    border: 2px solid #d6ccc2;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.modal-table__header {
+    text-align: left;
+    width: 35%;
+    padding: 8px 10px;
+    vertical-align: top;
+}
+
+.modal-table__text {
+    padding: 8px 10px;
+    line-height: 1.6;
+}
+
+.delete-form__button-submit {
+    display: block;
+    background-color: #b8390c;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 30px auto;
+    transition: background-color 0.2s;
+}
+
+.delete-form__button-submit:hover {
+    background-color: #943c3c;
+}
+
+.modal__close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #7b6650;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #7b6650;
+    text-decoration: none;
+    transition: color 0.2s;
+    line-height: normal;
+    box-sizing: border-box;
+}
+
+.modal__close:hover {
+    color: #9d9388;
+}
+
+
+
+@keyframes fadeIn {
+    form {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

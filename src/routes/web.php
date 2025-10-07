@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [ContactController::class, 'index'])->name('index');
+Route::post('/confirm', [ContactController::class, 'confirm'])->name('confirm');
+Route::post('/thanks', [ContactController::class, 'thanks'])->name('thanks');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+    Route::delete('contacts/{id}', [AdminController::class, 'destroy'])->name('contacts.destroy');
 });
