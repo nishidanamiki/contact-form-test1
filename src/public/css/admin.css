@@ -94,7 +94,7 @@
 .export__button-submit {
     background-color: #ede9e6;
     color: #9d9388;
-    border: none;
+    text-decoration: none;
     padding: 8px 20px;
     cursor: pointer;
 }
@@ -136,7 +136,7 @@
 
 .table {
     width: 80%;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
 .admin-table {

@@ -27,7 +27,7 @@
             <select name="category_id">
                 <option value="">お問い合わせの種類</option>
                 @foreach ($categories as $category)
-                    <option value="{{ $category_id }}"
+                    <option value="{{ $category->id }}"
                         {{ isset($category_id) && $category_id == $category->id ? 'selected' : '' }}>
                         {{ $category->content }}
                     </option>
@@ -39,8 +39,8 @@
         </form>
 
         <div class="flex">
-            <div class="export__button">
-                <button class="export__button-submit">エクスポート</button>
+            <div class="export-button">
+                <a href="{{ route('admin.export', request()->query()) }}" class="export__button-submit">エクスポート</a>
             </div>
             <div class="pagination">
                 {{ $contacts->links('pagination::bootstrap-4') }}

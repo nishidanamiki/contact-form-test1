@@ -20,5 +20,6 @@ Route::post('/confirm', [ContactController::class, 'confirm'])->name('confirm');
 Route::post('/thanks', [ContactController::class, 'thanks'])->name('thanks');
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+    Route::get('admin/export', [AdminController::class, 'exportCsv'])->name('admin.export');
     Route::delete('contacts/{id}', [AdminController::class, 'destroy'])->name('contacts.destroy');
 });
