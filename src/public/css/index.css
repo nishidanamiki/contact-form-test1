@@ -116,15 +116,36 @@ textarea::placeholder {
     cursor: pointer;
 }
 
+.form__input-select {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+}
+
 .form__input-select select {
+    width: 100%;
+    padding: 8px 32px 8px 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     color: #9e8b78;
     cursor: pointer;
+}
+
+.form__input-select::after {
+    content: "▼";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #9e8b78;
+    font-size: 16px;
 }
 
 .form__input-select option {
     color: #7b6650;
 }
-
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -147,8 +168,9 @@ select {
 }
 .form__input-half input {
     width: 100%;
-    padding: 8px 10px;
+    padding: 8px 20px;
     border: none;
+    color: #5c5047;
 }
 
 .form__error {

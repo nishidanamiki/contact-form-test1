@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Contact;
+use Illuminate\Database\QueryException;
+use Exception;
 
 class ContactsTableSeeder extends Seeder
 {

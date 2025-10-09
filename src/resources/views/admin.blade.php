@@ -18,22 +18,28 @@
         </div>
         <form action="{{ route('admin') }}" method="get" class="admin__search-form">
             <input type="text" name="keyword" placeholder="名前やメールアドレスを入力してください" value="{{ $keyword ?? '' }}">
-            <select name="gender">
-                <option value="">性別</option>
-                <option value="1" {{ isset($gender) && $gender == 1 ? 'selected' : '' }}>男性</option>
-                <option value="2" {{ isset($gender) && $gender == 2 ? 'selected' : '' }}>女性</option>
-                <option value="3" {{ isset($gender) && $gender == 3 ? 'selected' : '' }}>その他</option>
-            </select>
-            <select name="category_id">
-                <option value="">お問い合わせの種類</option>
-                @foreach ($categories as $category)
-                    <option value="{{ $category->id }}"
-                        {{ isset($category_id) && $category_id == $category->id ? 'selected' : '' }}>
-                        {{ $category->content }}
-                    </option>
-                @endforeach
-            </select>
-            <input type="date" name="date" value="{{ $date ?? '' }}">
+            <div class="form__input-select">
+                <select name="gender">
+                    <option value="">性別</option>
+                    <option value="1" {{ isset($gender) && $gender == 1 ? 'selected' : '' }}>男性</option>
+                    <option value="2" {{ isset($gender) && $gender == 2 ? 'selected' : '' }}>女性</option>
+                    <option value="3" {{ isset($gender) && $gender == 3 ? 'selected' : '' }}>その他</option>
+                </select>
+            </div>
+            <div class="form__input-select">
+                <select name="category_id">
+                    <option value="">お問い合わせの種類</option>
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}"
+                            {{ isset($category_id) && $category_id == $category->id ? 'selected' : '' }}>
+                            {{ $category->content }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form__input-date">
+                <input type="date" name="date" value="{{ $date ?? '' }}">
+            </div>
             <button class="search__button" type="submit">検索</button>
             <a href="{{ route('admin') }}" class="reset__button">リセット</a>
         </form>
@@ -43,7 +49,7 @@
                 <a href="{{ route('admin.export', request()->query()) }}" class="export__button-submit">エクスポート</a>
             </div>
             <div class="pagination">
-                {{ $contacts->links('pagination::bootstrap-4') }}
+                {{ $contacts->appends(request()->query())->links('pagination::bootstrap-4') }}
             </div>
         </div>
 

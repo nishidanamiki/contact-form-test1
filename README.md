@@ -1,4 +1,4 @@
-# contact-form-test1
+# お問い合わせフォーム
 
 ## 環境構築
 
@@ -6,7 +6,7 @@
 
 **Docker ビルド**
 
-1.`https://github.com/nishidanamiki/contact-form-test1.git`  
+1.`git clone https://github.com/nishidanamiki/contact-form-test1.git`  
 2.DokerDesktop アプリを立ち上げる  
 3.`docker compose up -d --build`
 

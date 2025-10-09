@@ -9,7 +9,7 @@
         <div class="contact-form__heading">
             <h2>Contact</h2>
         </div>
-        <form class="form" action="{{ route('confirm') }}" method="post">
+        <form class="form" action="{{ route('confirm') }}" method="post" novalidate>
             @csrf
             <div class="form__group">
                 <div class="form__group-title">
