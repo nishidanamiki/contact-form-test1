@@ -7,7 +7,7 @@
 @section('show_nav')
     <form action="{{ route('logout') }}" method="post">
         @csrf
-        <button type="submit">logput</button>
+        <button type="submit">logout</button>
     </form>
 @endsection
 
