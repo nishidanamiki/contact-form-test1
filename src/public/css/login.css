@@ -19,6 +19,7 @@
 .login__form {
     width: 420px;
     background-color: #fff;
+    border: 1px solid #d6ccc2;
     border-radius: 4px;
     margin: 0 auto;
     padding: 40px 50px;
